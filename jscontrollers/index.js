@@ -39,7 +39,6 @@ app.on('ready',function(){
  ipcMain.on('alldata',(err,args)=>{
     alldata=args
 })
- win.openDevTools()
  win.removeMenu()
 })
 app.on('window-all-closed',()=>{
@@ -65,7 +64,6 @@ function createSignUpPage(){
                 window.close()
             }
     })
-    window.openDevTools()
     window.removeMenu()
     window.on("window-all-closed",()=>{
         app.quit()
@@ -86,7 +84,6 @@ function createUserWindow(){
         protocol:'file',
         slashes:true
     }))
-    userWindow.openDevTools()
     userWindow.removeMenu()
     userWindow.on("window-all-closed",()=>{
         app.quit()
